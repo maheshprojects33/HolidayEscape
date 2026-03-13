@@ -1,0 +1,57 @@
+<section id="services" class="section bg-light">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">YOUR JOURNEY STARTS HERE</p>
+          <h2 class="service-title">Our Services</h2>
+          <p class="section-subtitle">"We are committed to making your travel experience Easy, Comfortable, and Unforgettable"</p>
+        </div>
+        <div class="packages-grid">
+          <!-- Package 1 -->
+          <div class="package-card animate-on-scroll">
+            <div class="package-img">
+              <img src="static/assets/image/tour.jpg" alt="Swiss Alps" />
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">International Tour Packages</h3>
+              <p class="service-desc">Discover the world with our exciting international tour packages. From cultural destinations to luxury vacations, we organize well-planned trips with comfortable hotels, guided tours, and smooth travel arrangements.</p>
+            </div>
+          </div>
+          <div class="package-card animate-on-scroll">
+            <div class="package-img">
+              <img src="static/assets/image/nepal.jpg" alt="Nepal" />
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Nepal Adventure Tours</h3>
+              <p class="service-desc">Explore the beauty of Nepal with trekking, jungle safaris, mountain views, and cultural experiences. We offer tours to Everest, Annapurna, Pokhara, Chitwan, and many more destinations.</p>
+            </div>
+          </div>
+          <div class="package-card animate-on-scroll">
+            <div class="package-img">
+              <img src="static/assets/image/flight1.jpg" alt="flight" />
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Flight Ticket Booking</h3>
+              <p class="service-desc">We help you find the best flight routes and prices for both international and domestic travel.</p>
+            </div>
+          </div>
+          <div class="package-card animate-on-scroll">
+            <div class="package-img">
+              <img src="static/assets/image/hotel.jpg" alt="hotel" />
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Hotel Reservations</h3>
+              <p class="service-desc">We partner with trusted hotels to provide comfortable stays for our clients.</p>
+            </div>
+          </div>
+          <div class="package-card animate-on-scroll">
+            <div class="package-img">
+              <img src="static/assets/image/plan.jpg" alt="plan" />
+            </div>
+            <div class="package-body">
+              <h3 class="package-title">Customized Travel Planning</h3>
+              <p class="service-desc">Every traveler is different. We design personalized travel packages based on your interests, schedule, and budget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

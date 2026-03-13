@@ -1,438 +1,549 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Holiday Escape Pvt Ltd — Explore the world</title>
-  <meta name="description" content="Holiday Escape Pvt Ltd offers curated travel packages, exclusive deals, and bespoke tour experiences worldwide. Book your dream vacation today." />
-  <meta name="author" content="Holiday Escape Pvt Ltd" />
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
-</head>
-<body>
-  <!-- ===== NAVBAR ===== -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <button class="nav-logo" onclick="smoothScroll('#home')">
-        <div class="logo-icon">✈</div>
-        <div>
-          <span class="logo-text">Holiday Escape</span>
-          <span class="logo-sub">Pvt Ltd</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Holiday Escape Pvt Ltd — Explore the world</title>
+    <meta name="description" content="Holiday Escape Pvt Ltd offers curated travel packages, exclusive deals, and bespoke tour experiences worldwide. Book your dream vacation today." />
+    <meta name="author" content="Holiday Escape Pvt Ltd" />
+    <link rel="icon" href="{% static 'assets/image/16px.png' %}" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav id="navbar">
+      <div class="nav-container">
+        <button class="nav-logo" onclick="smoothScroll('#home')">
+          <div class="logo-icon">
+            <img src="{% static 'assets/image/180px.png' %}" alt="Holiday Escape Logo" />
+          </div>
+          <div>
+            <span class="logo-text">Holiday Escape</span>
+            <span class="logo-sub">Pvt Ltd</span>
+          </div>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <button onclick="smoothScroll('#home')">Home</button>
+          <button onclick="smoothScroll('#packages')">Packages</button>
+          <button onclick="smoothScroll('#deals')">Deals</button>
+          <button onclick="smoothScroll('#about')">About</button>
+          <button onclick="smoothScroll('#services')">Services</button>
+          <button onclick="smoothScroll('#contact')">Contact</button>
+          <button class="btn-primary nav-book-btn" onclick="smoothScroll('#booking')">Book Now</button>
         </div>
-      </button>
-      <div class="nav-links" id="navLinks">
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+      </div>
+      <!-- Mobile menu -->
+      <div class="mobile-menu" id="mobileMenu">
         <button onclick="smoothScroll('#home')">Home</button>
         <button onclick="smoothScroll('#packages')">Packages</button>
         <button onclick="smoothScroll('#deals')">Deals</button>
         <button onclick="smoothScroll('#about')">About</button>
         <button onclick="smoothScroll('#contact')">Contact</button>
-        <button class="btn-primary nav-book-btn" onclick="smoothScroll('#booking')">Book Now</button>
+        <button class="btn-primary" onclick="smoothScroll('#booking')">Book Now</button>
       </div>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobileMenu">
-      <button onclick="smoothScroll('#home')">Home</button>
-      <button onclick="smoothScroll('#packages')">Packages</button>
-      <button onclick="smoothScroll('#deals')">Deals</button>
-      <button onclick="smoothScroll('#about')">About</button>
-      <button onclick="smoothScroll('#contact')">Contact</button>
-      <button class="btn-primary" onclick="smoothScroll('#booking')">Book Now</button>
-    </div>
-  </nav>
-  <!-- ===== HERO ===== -->
-  <section id="home" class="hero">
-    <div class="hero-bg">
-      <!-- Replace with your own image or use a placeholder -->
-      <img src="{% static 'assets/image/hero-travel.jpg' %}" alt="Tropical beach paradise" />
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content ">
-      <div class="hero-inner">
-        <p class="hero-label animate-on-scroll">✦ Explore the world, Your way...</p>
-        <h1 class="hero-title animate-on-scroll">Escape to Your <span class="text-green">Dream Destination</span></h1>
-        <p class="hero-desc animate-on-scroll">Curated travel experiences that transform ordinary holidays into extraordinary memories. Let us plan your perfect getaway.</p>
-        <div class="hero-buttons animate-on-scroll">
-          <button class="btn-primary btn-lg" onclick="smoothScroll('#packages')">Explore Packages</button>
-          <button class="btn-outline btn-lg" onclick="smoothScroll('#enquiry')">Plan My Trip</button>
-        </div>
-        <div class="hero-stats animate-on-scroll">
-          <div class="stat">
-            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <p class="stat-value">50+</p>
-            <p class="stat-label">Destinations</p>
-          </div>
-          <div class="stat">
-            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <p class="stat-value">12+</p>
-            <p class="stat-label">Years Experience</p>
-          </div>
-          <div class="stat">
-            <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <p class="stat-value">10K+</p>
-            <p class="stat-label">Happy Travelers</p>
-          </div>
-        </div>
+    </nav>
+    <!-- ===== HERO ===== -->
+    <section id="home" class="hero">
+      <div class="hero-bg">
+        <img src="{% static 'assets/image/hero1.jpg' %}" alt="Tropical beach paradise" />
+        <div class="hero-overlay"></div>
       </div>
-    </div>
-  </section>
-  <!-- ===== PACKAGES ===== -->
-  <section id="packages" class="section bg-light">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label text-blue">Explore The World</p>
-        <h2 class="section-title">Ongoing Tour Packages</h2>
-        <p class="section-subtitle">Handpicked destinations with carefully planned itineraries for unforgettable experiences.</p>
-      </div>
-      <div class="packages-grid">
-        <!-- Package 1 -->
-        <div class="package-card animate-on-scroll">
-          <div class="package-img">
-            <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&q=80" alt="Swiss Alps" />
-            <div class="package-rating">★ 4.9</div>
+      <div class="hero-content">
+        <div class="hero-inner">
+          <p class="hero-label animate-on-scroll">✦ Explore the world, Your way...</p>
+          <h1 class="hero-title animate-on-scroll">Escape to Your <span class="text-green">Dream Destination</span></h1>
+          <p class="hero-desc animate-on-scroll">
+            Curated travel experiences that transform ordinary holidays into extraordinary memories. <br /> We specialize in creating unforgettable travel experiences around the world. Whether you are planning an international holiday, a Nepal adventure, or a customized trip, our team is here to make your journey smooth and memorable.
+          </p>
+          <div class="hero-buttons animate-on-scroll">
+            <button class="btn-primary btn-lg" onclick="smoothScroll('#packages')">Explore Packages</button>
+            <button class="btn-outline btn-lg" onclick="smoothScroll('#enquiry')">Plan My Trip</button>
           </div>
-          <div class="package-body">
-            <p class="package-location">📍 Switzerland</p>
-            <h3 class="package-title">Swiss Alps Adventure</h3>
-            <p class="package-desc">Explore majestic peaks, pristine lakes, and charming villages in the heart of the Alps.</p>
-            <p class="package-duration">🕐 7 Days / 6 Nights</p>
-            <div class="package-footer">
-              <div>
-                <span class="package-from">From</span>
-                <p class="package-price">$2,499</p>
-              </div>
-              <button class="btn-primary btn-sm" onclick="selectPackageAndScroll('Swiss Alps Adventure')">Book Now</button>
+          <div class="hero-stats animate-on-scroll">
+            <div class="stat">
+              <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <p class="stat-value">50+</p>
+              <p class="stat-label">Destinations</p>
             </div>
-          </div>
-        </div>
-        <!-- Package 2 -->
-        <div class="package-card animate-on-scroll">
-          <div class="package-img">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Ancient Temples" />
-            <div class="package-rating">★ 4.8</div>
-          </div>
-          <div class="package-body">
-            <p class="package-location">📍 Cambodia & Vietnam</p>
-            <h3 class="package-title">Ancient Temple Trail</h3>
-            <p class="package-desc">Journey through ancient ruins, vibrant markets, and lush landscapes of Southeast Asia.</p>
-            <p class="package-duration">🕐 10 Days / 9 Nights</p>
-            <div class="package-footer">
-              <div>
-                <span class="package-from">From</span>
-                <p class="package-price">$1,899</p>
-              </div>
-              <button class="btn-primary btn-sm" onclick="selectPackageAndScroll('Ancient Temple Trail')">Book Now</button>
+            <div class="stat">
+              <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+              <p class="stat-value">12+</p>
+              <p class="stat-label">Years Experience</p>
             </div>
-          </div>
-        </div>
-        <!-- Package 3 -->
-        <div class="package-card animate-on-scroll">
-          <div class="package-img">
-            <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=600&q=80" alt="Mediterranean Coast" />
-            <div class="package-rating">★ 4.9</div>
-          </div>
-          <div class="package-body">
-            <p class="package-location">📍 Italy & Croatia</p>
-            <h3 class="package-title">Mediterranean Bliss</h3>
-            <p class="package-desc">Sail along colorful coastlines, savor local cuisine, and discover hidden coastal gems.</p>
-            <p class="package-duration">🕐 8 Days / 7 Nights</p>
-            <div class="package-footer">
-              <div>
-                <span class="package-from">From</span>
-                <p class="package-price">$3,199</p>
-              </div>
-              <button class="btn-primary btn-sm" onclick="selectPackageAndScroll('Mediterranean Bliss')">Book Now</button>
-            </div>
-          </div>
-        </div>
-        <!-- Package 4 -->
-        <div class="package-card animate-on-scroll">
-          <div class="package-img">
-            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80" alt="African Safari" />
-            <div class="package-rating">★ 5.0</div>
-          </div>
-          <div class="package-body">
-            <p class="package-location">📍 Kenya & Tanzania</p>
-            <h3 class="package-title">African Safari Experience</h3>
-            <p class="package-desc">Witness the great migration and encounter majestic wildlife on the vast savanna.</p>
-            <p class="package-duration">🕐 9 Days / 8 Nights</p>
-            <div class="package-footer">
-              <div>
-                <span class="package-from">From</span>
-                <p class="package-price">$4,299</p>
-              </div>
-              <button class="btn-primary btn-sm" onclick="selectPackageAndScroll('African Safari Experience')">Book Now</button>
+            <div class="stat">
+              <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+              <p class="stat-value">10K+</p>
+              <p class="stat-label">Happy Travelers</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- ===== DEALS ===== -->
-  <section id="deals" class="section bg-muted">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-label text-green">🔥 Hot Deals</p>
-        <h2 class="section-title">Exclusive Discounted Packages</h2>
-        <p class="section-subtitle">Limited-time offers you don't want to miss. Book now and save big!</p>
+      <div class="hero-footer animate-on-scroll">
+        <p>"Let us help you turn your travel dreams into reality"</p>
       </div>
-      <div class="deals-grid">
-        <!-- Deal 1 -->
-        <div class="deal-card animate-on-scroll">
-          <div class="deal-img">
-            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80" alt="Maldives" />
-            <div class="deal-badge">🏷 30% OFF</div>
-          </div>
-          <div class="deal-body">
-            <h3 class="deal-title">Maldives Paradise Retreat</h3>
-            <div class="deal-prices">
-              <span class="deal-new-price">$3,899</span>
-              <span class="deal-old-price">$5,499</span>
-            </div>
-            <ul class="deal-highlights">
-              <li><span class="dot"></span>5-Star Overwater Villa</li>
-              <li><span class="dot"></span>All-Inclusive Meals</li>
-              <li><span class="dot"></span>Private Snorkeling Tour</li>
-            </ul>
-            <p class="deal-deadline">🕐 Limited spots — ends March 31</p>
-            <button class="btn-primary btn-full" onclick="smoothScroll('#booking')">Grab This Deal</button>
-          </div>
-        </div>
-        <!-- Deal 2 -->
-        <div class="deal-card animate-on-scroll">
-          <div class="deal-img">
-            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan Cherry Blossom" />
-            <div class="deal-badge">🏷 27% OFF</div>
-          </div>
-          <div class="deal-body">
-            <h3 class="deal-title">Japan Cherry Blossom Special</h3>
-            <div class="deal-prices">
-              <span class="deal-new-price">$2,399</span>
-              <span class="deal-old-price">$3,299</span>
-            </div>
-            <ul class="deal-highlights">
-              <li><span class="dot"></span>Tokyo & Kyoto</li>
-              <li><span class="dot"></span>Bullet Train Pass</li>
-              <li><span class="dot"></span>Traditional Ryokan Stay</li>
-            </ul>
-            <p class="deal-deadline">🕐 Seasonal offer — April departures</p>
-            <button class="btn-primary btn-full" onclick="smoothScroll('#booking')">Grab This Deal</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ===== ABOUT ===== -->
-  <section id="about" class="section bg-light">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text">
-          <p class="section-label text-blue">About Us</p>
-          <h2 class="section-title">Crafting Unforgettable Travel Experiences</h2>
-          <p class="about-desc">Holiday Escape Pvt Ltd is a premier travel and tour agency dedicated to turning your travel dreams into reality. With over a decade of experience, we specialize in curating bespoke travel experiences across the globe.</p>
-          <p class="about-desc">From serene beach getaways to thrilling mountain expeditions, our team of passionate travel experts ensures every detail is meticulously planned so you can focus on making memories.</p>
-        </div>
-        <div>
-          <h3 class="about-why-title">Why Choose Us</h3>
-          <div class="features-grid">
-            <div class="feature-card animate-on-scroll">
-              <div class="feature-icon">🌍</div>
-              <h4>Global Network</h4>
-              <p>Partnerships with 200+ hotels and airlines worldwide.</p>
-            </div>
-            <div class="feature-card animate-on-scroll">
-              <div class="feature-icon">🛡</div>
-              <h4>Secure Booking</h4>
-              <p>100% secure payments with full refund guarantee.</p>
-            </div>
-            <div class="feature-card animate-on-scroll">
-              <div class="feature-icon">❤</div>
-              <h4>Tailored Trips</h4>
-              <p>Every itinerary is customized to your preferences.</p>
-            </div>
-            <div class="feature-card animate-on-scroll">
-              <div class="feature-icon">🎧</div>
-              <h4>24/7 Support</h4>
-              <p>Round-the-clock assistance before, during, and after your trip.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ===== BOOKING ===== -->
-  <section id="booking" class="section bg-light">
-    <div class="container narrow">
-      <!-- Default form view -->
-      <div id="bookingForm">
+    </section>
+
+    <!-- ===== PACKAGES ===== -->
+    <section id="packages" class="section bg-light">
+      <div class="container">
         <div class="section-header">
-          <p class="section-label text-blue">Ready to Go?</p>
-          <h2 class="section-title">Book Your Trip</h2>
-          <p class="section-subtitle">Fill in your details and we'll handle the rest.</p>
+          <p class="section-label text-blue">Explore The World</p>
+          <h2 class="section-title">Ongoing Tour Packages</h2>
+          <p class="section-subtitle">Handpicked destinations with carefully planned itineraries for unforgettable experiences.</p>
         </div>
-        <form class="form-card" id="bookingFormEl" novalidate>
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" name="name" placeholder="Ashim Maharjan" />
-              <p class="form-error" id="bookErr-name"></p>
+        <div class="packages-grid">
+          <!-- Package 1 -->
+          <div class="package-card animate-on-scroll">
+            <div class="package-img">
+              <img src="static/assets/image/tour.jpg" alt="Swiss Alps" />
+              <div class="package-rating">★ 4.9</div>
+            </div>
+            <div class="package-body">
+              <p class="package-location">📍 Switzerland</p>
+              <h3 class="package-title">Swiss Alps Adventure</h3>
+              <p class="package-desc">Explore majestic peaks, pristine lakes, and charming villages in the heart of the Alps.</p>
+              <p class="package-duration">🕐 7 Days / 6 Nights</p>
+              <div class="package-footer">
+                <div>
+                  <span class="package-from">From</span>
+                  <p class="package-price">$2,499</p>
+                </div>
+                <button class="btn-primary btn-sm" onclick="selectPackageAndScroll('Swiss Alps Adventure')">Book Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Package 2 -->
+          <div class="package-card animate-on-scroll">
+            <div class="package-img">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Ancient Temples" />
+              <div class="package-rating">★ 4.8</div>
+            </div>
+            <div class="package-body">
+              <p class="package-location">📍 Cambodia & Vietnam</p>
+              <h3 class="package-title">Ancient Temple Trail</h3>
+              <p class="package-desc">Journey through ancient ruins, vibrant markets, and lush landscapes of Southeast Asia.</p>
+              <p class="package-duration">🕐 10 Days / 9 Nights</p>
+              <div class="package-footer">
+                <div>
+                  <span class="package-from">From</span>
+                  <p class="package-price">$1,899</p>
+                </div>
+                <button class="btn-primary btn-sm" onclick="selectPackageAndScroll('Ancient Temple Trail')">Book Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Package 3 -->
+          <div class="package-card animate-on-scroll">
+            <div class="package-img">
+              <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=600&q=80" alt="Mediterranean Coast" />
+              <div class="package-rating">★ 4.9</div>
+            </div>
+            <div class="package-body">
+              <p class="package-location">📍 Italy & Croatia</p>
+              <h3 class="package-title">Mediterranean Bliss</h3>
+              <p class="package-desc">Sail along colorful coastlines, savor local cuisine, and discover hidden coastal gems.</p>
+              <p class="package-duration">🕐 8 Days / 7 Nights</p>
+              <div class="package-footer">
+                <div>
+                  <span class="package-from">From</span>
+                  <p class="package-price">$3,199</p>
+                </div>
+                <button class="btn-primary btn-sm" onclick="selectPackageAndScroll('Mediterranean Bliss')">Book Now</button>
+              </div>
+            </div>
+          </div>
+          <!-- Package 4 -->
+          <div class="package-card animate-on-scroll">
+            <div class="package-img">
+              <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=600&q=80" alt="African Safari" />
+              <div class="package-rating">★ 5.0</div>
+            </div>
+            <div class="package-body">
+              <p class="package-location">📍 Kenya & Tanzania</p>
+              <h3 class="package-title">African Safari Experience</h3>
+              <p class="package-desc">Witness the great migration and encounter majestic wildlife on the vast savanna.</p>
+              <p class="package-duration">🕐 9 Days / 8 Nights</p>
+              <div class="package-footer">
+                <div>
+                  <span class="package-from">From</span>
+                  <p class="package-price">$4,299</p>
+                </div>
+                <button class="btn-primary btn-sm" onclick="selectPackageAndScroll('African Safari Experience')">Book Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== DEALS ===== -->
+    <section id="deals" class="section bg-muted">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label text-green">🔥 Hot Deals</p>
+          <h2 class="section-title">Exclusive Discounted Packages</h2>
+          <p class="section-subtitle">Limited-time offers you don't want to miss. Book now and save big!</p>
+        </div>
+        <div class="deals-grid">
+          <!-- Deal 1 -->
+          <div class="deal-card animate-on-scroll">
+            <div class="deal-img">
+              <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80" alt="Maldives" />
+              <div class="deal-badge">🏷 30% OFF</div>
+            </div>
+            <div class="deal-body">
+              <h3 class="deal-title">Maldives Paradise Retreat</h3>
+              <div class="deal-prices">
+                <span class="deal-new-price">$3,899</span>
+                <span class="deal-old-price">$5,499</span>
+              </div>
+              <ul class="deal-highlights">
+                <li>
+                  <span class="dot"></span>5-Star Overwater Villa
+                </li>
+                <li>
+                  <span class="dot"></span>All-Inclusive Meals
+                </li>
+                <li>
+                  <span class="dot"></span>Private Snorkeling Tour
+                </li>
+              </ul>
+              <p class="deal-deadline">🕐 Limited spots — ends March 31</p>
+              <button class="btn-primary btn-full" onclick="smoothScroll('#booking')">Grab This Deal</button>
+            </div>
+          </div>
+          <!-- Deal 2 -->
+          <div class="deal-card animate-on-scroll">
+            <div class="deal-img">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Japan Cherry Blossom" />
+              <div class="deal-badge">🏷 27% OFF</div>
+            </div>
+            <div class="deal-body">
+              <h3 class="deal-title">Japan Cherry Blossom Special</h3>
+              <div class="deal-prices">
+                <span class="deal-new-price">$2,399</span>
+                <span class="deal-old-price">$3,299</span>
+              </div>
+              <ul class="deal-highlights">
+                <li>
+                  <span class="dot"></span>Tokyo & Kyoto
+                </li>
+                <li>
+                  <span class="dot"></span>Bullet Train Pass
+                </li>
+                <li>
+                  <span class="dot"></span>Traditional Ryokan Stay
+                </li>
+              </ul>
+              <p class="deal-deadline">🕐 Seasonal offer — April departures</p>
+              <button class="btn-primary btn-full" onclick="smoothScroll('#booking')">Grab This Deal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section bg-light">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="section-label text-blue">About Us</p>
+            <h2 class="section-title">Crafting Unforgettable Travel Experiences</h2>
+            <p class="about-desc">
+              Holiday Escape Pvt. Ltd. is a travel agency dedicated to providing high-quality travel services and unforgettable holiday experiences. Based in Kathmandu, Nepal, our company focuses on delivering reliable travel solutions including international tours, Nepal adventure trips, flight bookings, and hotel arrangements. <br><br>Our mission is simple: To help travelers explore the world with comfort, safety, and unforgettable memories.
+            </p>
+            <p class="about-desc">We offer carefully designed travel packages, flight bookings, hotel reservations, and personalized travel planning for individuals, families, and groups. With deep local knowledge and strong partnerships worldwide, we ensure every journey is seamless—from hidden gems in the Himalayas to dream destinations across continents. Whether you're seeking <em>Thrilling Adventures, Cultural Immersion, Relaxing Getaways, or Hassle-free Family Vacations</em>, our passionate team is committed to turning your travel dreams into reality.</p>
+          </div>
+          <div>
+            <h3 class="about-why-title">Why Choose Us</h3>
+            <div class="features-grid">
+              <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">✈️</div>
+                <h4>Trusted Travel Partner</h4>
+                <p>We provide reliable travel services and carefully planned tour packages to ensure a smooth journey for every client.</p>
+              </div>
+              <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">🌍</div>
+                <h4>Wide Range of Destinations</h4>
+                <p>From beautiful Asian destinations to popular international locations, we offer travel packages across the world.</p>
+              </div>
+              <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">🏨</div>
+                <h4>Quality Hotels & Services</h4>
+                <p>We work with trusted hotels, airlines, and tour partners to provide comfortable stays and high-quality travel experiences.</p>
+              </div>
+              <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">📋</div>
+                <h4>Customized Travel Planning</h4>
+                <p>Every traveler is different. Our team helps design personalized travel plans based on your interests, schedule, and budget.</p>
+              </div>
+              <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">🤝</div>
+                <h4>Dedicated Customer Support</h4>
+                <p>Our team is always ready to assist you before, during, and after your trip to ensure everything goes smoothly</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== OUR SERVICES ===== -->
+    <section id="services" class="">
+      <div class="container">
+        <div class="service-header">
+          <p class="service-label">YOUR JOURNEY STARTS HERE</p>
+          <h2 class="service-title">Our Services</h2>
+          <p class="service-subtitle">"We are committed to making your travel experience Easy, Comfortable, and Unforgettable"</p>
+        </div>
+        <div class="service-grid">
+          
+          <div class="service-card animate-on-scroll">
+            <div class="service-img">
+              <img src="static/assets/image/tour.jpg" alt="Swiss Alps" />
+            </div>
+            <div class="service-body">
+              <h3 class="package-title">International Tour Packages</h3>
+              <p class="service-desc">Discover the world with our exciting international tour packages. From cultural destinations to luxury vacations, we organize well-planned trips with comfortable hotels, guided tours, and smooth travel arrangements.</p>
+            </div>
+          </div>
+          <div class="service-card animate-on-scroll">
+            <div class="service-img">
+              <img src="static/assets/image/nepal.jpg" alt="Nepal" />
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Nepal Adventure Tours</h3>
+              <p class="service-desc">Explore the beauty of Nepal with trekking, jungle safaris, mountain views, and cultural experiences. We offer tours to Everest, Annapurna, Pokhara, Chitwan, and many more destinations.</p>
+            </div>
+          </div>
+          <div class="service-card animate-on-scroll">
+            <div class="service-img">
+              <img src="static/assets/image/flight1.jpg" alt="flight" />
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Flight Ticket Booking</h3>
+              <p class="service-desc">We help you find the best flight routes and prices for both international and domestic travel.</p>
+            </div>
+          </div>
+          <div class="service-card animate-on-scroll">
+            <div class="service-img">
+              <img src="static/assets/image/hotel.jpg" alt="hotel" />
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Hotel Reservations</h3>
+              <p class="service-desc">We partner with trusted hotels to provide comfortable stays for our clients.</p>
+            </div>
+          </div>
+          <div class="service-card animate-on-scroll">
+            <div class="service-img">
+              <img src="static/assets/image/plan.jpg" alt="plan" />
+            </div>
+            <div class="service-body">
+              <h3 class="service-title">Customized Travel Planning</h3>
+              <p class="service-desc">Every traveler is different. We design personalized travel packages based on your interests, schedule, and budget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BOOKING ===== -->
+    <section id="booking" class="section bg-light">
+      <div class="container narrow">
+        <!-- Default form view -->
+        <div id="bookingForm">
+          <div class="section-header">
+            <p class="section-label text-blue">Ready to Go?</p>
+            <h2 class="section-title">Book Your Trip</h2>
+            <p class="section-subtitle">Fill in your details and we'll handle the rest.</p>
+          </div>
+          <form class="form-card" id="bookingFormEl" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Ashim Maharjan" />
+                <p class="form-error" id="bookErr-name"></p>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="ashim@example.com" />
+                <p class="form-error" id="bookErr-email"></p>
+              </div>
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" name="phone" placeholder="+977 9841234567" />
+                <p class="form-error" id="bookErr-phone"></p>
+              </div>
+              <div class="form-group">
+                <label>Select Package</label>
+                <select name="package" id="booking-package">
+                  <option value="" disabled selected>Choose a package</option>
+                  <option>Swiss Alps Adventure</option>
+                  <option>Ancient Temple Trail</option>
+                  <option>Mediterranean Bliss</option>
+                  <option>African Safari Experience</option>
+                  <option>Maldives Paradise Retreat</option>
+                  <option>Japan Cherry Blossom Special</option>
+                </select>
+                <p class="form-error" id="bookErr-package"></p>
+              </div>
+              <div class="form-group">
+                <label>Travel Date</label>
+                <input type="date" name="date" />
+                <p class="form-error" id="bookErr-date"></p>
+              </div>
+              <div class="form-group">
+                <label>Number of Travelers</label>
+                <input type="number" name="travelers" placeholder="2" min="1" />
+                <p class="form-error" id="bookErr-travelers"></p>
+              </div>
+            </div>
+            <div class="form-group full-width">
+              <label>Special Requests</label>
+              <textarea name="requests" rows="3" placeholder="Any dietary restrictions, accessibility needs, etc."></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">Submit Booking</button>
+          </form>
+        </div>
+        <!-- Success view (hidden by default) -->
+        <div id="bookingSuccess" class="success-msg" style="display:none;">
+          <div class="success-icon">✔</div>
+          <h2>Booking Confirmed!</h2>
+          <p>Thank you! We'll get back to you within 24 hours with your itinerary details.</p>
+          <button class="btn-primary" onclick="resetBooking()">Book Another Trip</button>
+        </div>
+      </div>
+    </section>
+    <!-- ===== ENQUIRY ===== -->
+    <section id="enquiry" class="section gradient-bg">
+      <div class="container narrow">
+        <div id="enquiryForm">
+          <div class="section-header light">
+            <p class="section-label text-green-light">Have Questions?</p>
+            <h2 class="section-title text-white">Send Us an Enquiry</h2>
+            <p class="section-subtitle text-white-70">Not sure which package is right? Let us help you plan the perfect trip.</p>
+          </div>
+          <form class="form-card" id="enquiryFormEl" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="Your name" />
+                <p class="form-error" id="enqErr-name"></p>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="email" placeholder="you@email.com" />
+                <p class="form-error" id="enqErr-email"></p>
+              </div>
             </div>
             <div class="form-group">
-              <label>Email</label>
-              <input type="email" name="email" placeholder="ashim@example.com" />
-              <p class="form-error" id="bookErr-email"></p>
-            </div>
-            <div class="form-group">
-              <label>Phone</label>
+              <label>Phone (optional)</label>
               <input type="tel" name="phone" placeholder="+977 9841234567" />
-              <p class="form-error" id="bookErr-phone"></p>
             </div>
             <div class="form-group">
-              <label>Select Package</label>
-              <select name="package" id="booking-package">
-                <option value="" disabled selected>Choose a package</option>
-                <option>Swiss Alps Adventure</option>
-                <option>Ancient Temple Trail</option>
-                <option>Mediterranean Bliss</option>
-                <option>African Safari Experience</option>
-                <option>Maldives Paradise Retreat</option>
-                <option>Japan Cherry Blossom Special</option>
-              </select>
-              <p class="form-error" id="bookErr-package"></p>
+              <label>Interested Package (optional)</label>
+              <input type="text" name="interested_package" placeholder="e.g. Maldives Paradise Retreat" />
             </div>
             <div class="form-group">
-              <label>Travel Date</label>
-              <input type="date" name="date" />
-              <p class="form-error" id="bookErr-date"></p>
+              <label>Your Message</label>
+              <textarea name="message" rows="4" placeholder="Tell us about your dream trip..."></textarea>
+              <p class="form-error" id="enqErr-message"></p>
             </div>
-            <div class="form-group">
-              <label>Number of Travelers</label>
-              <input type="number" name="travelers" placeholder="2" min="1" />
-              <p class="form-error" id="bookErr-travelers"></p>
-            </div>
-          </div>
-          <div class="form-group full-width">
-            <label>Special Requests</label>
-            <textarea name="requests" rows="3" placeholder="Any dietary restrictions, accessibility needs, etc."></textarea>
-          </div>
-          <button type="submit" class="btn-primary btn-full">Submit Booking</button>
-        </form>
-      </div>
-      <!-- Success view (hidden by default) -->
-      <div id="bookingSuccess" class="success-msg" style="display:none;">
-        <div class="success-icon">✔</div>
-        <h2>Booking Confirmed!</h2>
-        <p>Thank you! We'll get back to you within 24 hours with your itinerary details.</p>
-        <button class="btn-primary" onclick="resetBooking()">Book Another Trip</button>
-      </div>
-    </div>
-  </section>
-  <!-- ===== ENQUIRY ===== -->
-  <section id="enquiry" class="section gradient-bg">
-    <div class="container narrow">
-      <div id="enquiryForm">
-        <div class="section-header light">
-          <p class="section-label text-green-light">Have Questions?</p>
-          <h2 class="section-title text-white">Send Us an Enquiry</h2>
-          <p class="section-subtitle text-white-70">Not sure which package is right? Let us help you plan the perfect trip.</p>
+            <button type="submit" class="btn-primary btn-full">✉ Send Enquiry</button>
+          </form>
         </div>
-        <form class="form-card" id="enquiryFormEl" novalidate>
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" name="name" placeholder="Your name" />
-              <p class="form-error" id="enqErr-name"></p>
-            </div>
-            <div class="form-group">
-              <label>Email</label>
-              <input type="email" name="email" placeholder="you@email.com" />
-              <p class="form-error" id="enqErr-email"></p>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Phone (optional)</label>
-            <input type="tel" name="phone" placeholder="+977 9841234567" />
-          </div>
-          <div class="form-group">
-            <label>Interested Package (optional)</label>
-            <input type="text" name="interested_package" placeholder="e.g. Maldives Paradise Retreat" />
-          </div>
-          <div class="form-group">
-            <label>Your Message</label>
-            <textarea name="message" rows="4" placeholder="Tell us about your dream trip..."></textarea>
-            <p class="form-error" id="enqErr-message"></p>
-          </div>
-          <button type="submit" class="btn-primary btn-full">✉ Send Enquiry</button>
-        </form>
+        <div id="enquirySuccess" class="success-msg light-text" style="display:none;">
+          <div class="success-icon">✔</div>
+          <h2>Enquiry Sent!</h2>
+          <p>Our travel experts will reach out to you shortly.</p>
+          <button class="btn-white" onclick="resetEnquiry()">Send Another Enquiry</button>
+        </div>
       </div>
-      <div id="enquirySuccess" class="success-msg light-text" style="display:none;">
-        <div class="success-icon">✔</div>
-        <h2>Enquiry Sent!</h2>
-        <p>Our travel experts will reach out to you shortly.</p>
-        <button class="btn-white" onclick="resetEnquiry()">Send Another Enquiry</button>
-      </div>
-    </div>
-  </section>
-  <!-- ===== FOOTER ===== -->
-  <footer id="contact" class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">
-            <div class="logo-icon">✈</div>
-            <div>
-              <span class="logo-text">Holiday Escape</span>
-              <span class="logo-sub">Pvt Ltd</span>
+    </section>
+    <!-- ===== FOOTER ===== -->
+    <footer id="contact" class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <div class="logo-icon">✈</div>
+              <div>
+                <span class="logo-text">Holiday Escape</span>
+                <span class="logo-sub">Pvt Ltd</span>
+              </div>
+            </div>
+            <p class="footer-desc">Your trusted partner in creating unforgettable travel experiences across the globe.</p>
+          </div>
+          <div>
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li>
+                <button onclick="smoothScroll('#home')">Home</button>
+              </li>
+              <li>
+                <button onclick="smoothScroll('#packages')">Packages</button>
+              </li>
+              <li>
+                <button onclick="smoothScroll('#deals')">Deals</button>
+              </li>
+              <li>
+                <button onclick="smoothScroll('#about')">About Us</button>
+              </li>
+              <li>
+                <button onclick="smoothScroll('#booking')">Book Now</button>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-heading">Contact Us</h4>
+            <ul class="footer-contact">
+              <li>
+                📍 Manbhawan, AVM Road<br />Lalitpur, Nepal
+              </li>
+              <li>📞 +977 9841 676 542</li>
+              <li>📞 +977 9828 915 885</li>
+              <li>✉ holidayescape.global@gmail.com</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="footer-heading">Stay Connected</h4>
+            <p class="footer-desc">Follow us on social media for travel inspiration.</p>
+            <div class="social-links">
+              <a href="https://www.facebook.com/share/1HAJ8GuPrq/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/h0lidayescape?igsh=MWJlMGxkdDA3bWllMA==" target="_blank" title="Instagram" style="color: #e4405f; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@holidayescapee?_r=1&_t=ZS-94e9HdixLWu" target="_blank" title="Tiktok" style="color: #ffffffff; font-size: 1.5rem;"><i class="fab fa-tiktok"></i></a>
             </div>
           </div>
-          <p class="footer-desc">Your trusted partner in creating unforgettable travel experiences across the globe.</p>
         </div>
-        <div>
-          <h4 class="footer-heading">Quick Links</h4>
-          <ul class="footer-links">
-            <li><button onclick="smoothScroll('#home')">Home</button></li>
-            <li><button onclick="smoothScroll('#packages')">Packages</button></li>
-            <li><button onclick="smoothScroll('#deals')">Deals</button></li>
-            <li><button onclick="smoothScroll('#about')">About Us</button></li>
-            <li><button onclick="smoothScroll('#booking')">Book Now</button></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-heading">Contact Us</h4>
-          <ul class="footer-contact">
-            <li>📍 Manbhawan, AVM Road<br/>Lalitpur, Nepal</li>
-            <li>📞 +977 1 555 1234</li>
-            <li>✉ enquiry@holidayescape.com</li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-heading">Stay Connected</h4>
-          <p class="footer-desc">Follow us on social media for travel inspiration.</p>
-          <div class="social-links">
-            <a href="#" title="Facebook">F</a>
-            <a href="#" title="Instagram">I</a>
-            <a href="#" title="Twitter">T</a>
-            <a href="#" title="YouTube">Y</a>
+        <div class="footer-bottom">
+          <p>© 2026 Holiday Escape Pvt Ltd. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>© 2026 Holiday Escape Pvt Ltd. All rights reserved.</p>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!-- Toast notification -->
-  <div id="toast" class="toast"></div>
-  <script src="{% static 'assets/js/script.js' %}"></script>
-</body>
+    </footer>
+    <!-- Toast notification -->
+    <div id="toast" class="toast"></div>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+  </body>
 </html>

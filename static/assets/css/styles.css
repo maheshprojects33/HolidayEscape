@@ -267,12 +267,12 @@ ul {
 }
 
 .logo-icon {
-    background: linear-gradient(135deg, var(--blue), var(--blue-dark));
-    color: #fff;
-    border-radius: var(--radius);
-    padding: 0.5rem;
-    font-size: 1.1rem;
-    line-height: 1;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
     transition: transform 0.2s;
 }
 
@@ -485,7 +485,7 @@ ul {
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
 }
 
@@ -496,6 +496,18 @@ ul {
     color: #fff;
     line-height: 1.1;
     margin-bottom: 1.5rem;
+}
+
+.hero-footer {
+    text-align: center; 
+    position: absolute; 
+    bottom: 40px; left: 0; right: 0; 
+    color: whitesmoke; 
+    font-size: 1.25rem; 
+    font-weight: bold; 
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+    text-transform: capitalize;
+    
 }
 
 @media (min-width: 640px) {
@@ -521,6 +533,7 @@ ul {
     font-size: 1.125rem;
     max-width: 480px;
     margin-bottom: 2rem;
+    text-align: justify;
 }
 
 .hero-buttons {
@@ -808,7 +821,7 @@ ul {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
-    align-items: center;
+    
 }
 
 @media (min-width: 1024px) {
@@ -821,6 +834,7 @@ ul {
     color: var(--muted-fg);
     line-height: 1.7;
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 .about-why-title {
@@ -841,6 +855,7 @@ ul {
     background: hsl(145, 40%, 92%, 0.5);
     border-radius: 0.75rem;
     padding: 1.25rem;
+    text-align: justify;
     transition: box-shadow 0.3s;
 }
 
@@ -1164,4 +1179,142 @@ ul {
 .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ---------- SERVICES ---------- */
+#services {
+    padding: 4rem 1rem;
+    background: var(--bg);
+}
+
+@media (min-width: 768px) {
+    #services {
+        padding: 5rem 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #services {
+        padding: 6rem 4rem;
+    }
+}
+
+.service-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.service-label {
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+}
+
+.service-title {
+    font-family: var(--font-display);
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: -0.01em;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .service-title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .service-title {
+        font-size: 2.5rem;
+    }
+}
+
+.service-subtitle {
+    font-size: 1rem;
+    color: var(--muted-fg);
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.service-card {
+    background: var(--card);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.service-card:hover {
+    box-shadow: var(--shadow-elevated);
+    transform: translateY(-8px);
+}
+
+.service-img {
+    position: relative;
+    height: 14rem;
+    overflow: hidden;
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.service-card:hover .service-img img {
+    transform: scale(1.1);
+}
+
+.service-body {
+    padding: 1.5rem;
+}
+
+.service-body .service-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--card-fg);
+    margin-bottom: 0.75rem;
+    text-align: left;
+}
+
+.service-body .package-title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--card-fg);
+    margin-bottom: 0.75rem;
+    text-align: left;
+}
+
+.service-desc {
+    font-size: 0.9375rem;
+    color: var(--muted-fg);
+    line-height: 1.6;
+    text-align: justify;
 }
